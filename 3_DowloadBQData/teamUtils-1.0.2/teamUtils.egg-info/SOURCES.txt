@@ -1,0 +1,7 @@
+setup.py
+teamUtils.py
+teamUtils.egg-info/PKG-INFO
+teamUtils.egg-info/SOURCES.txt
+teamUtils.egg-info/dependency_links.txt
+teamUtils.egg-info/requires.txt
+teamUtils.egg-info/top_level.txt
