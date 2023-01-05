@@ -1,0 +1,6 @@
+*.csv
+.DS_Store
+.DS_Store?
+creds/
+teamUtils-1.0.2/
+venv-promo/
