@@ -1,7 +1,12 @@
-from teamUtils import BQ_User # Pricing Analytics package we just installed
-from shapely.wkt import loads
+"""
+This is how I got data from BQ to build analysis in python on my local
+"""
 
-home_project='analytics-askuity-thd' # Make this the project you use in your everyday work, for example Jared would use analytics-pricing-thd
+from shapely.wkt import loads
+from teamUtils import BQ_User  # Pricing Analytics package we just installed
+
+# Make this the project you use in your everyday work, for example Jared would use analytics-pricing-thd
+home_project = 'analytics-askuity-thd'
 bq = BQ_User(project_name=home_project)
 
 print("Pointer Before SQL")

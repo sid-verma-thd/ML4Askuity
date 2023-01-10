@@ -1,0 +1,11 @@
+SELECT
+  DISTINCT USER_ID
+FROM
+  `pr-edw-views-thd.VENDOR_COLLAB_VIEWS.VENDOR_USER_ID`
+WHERE
+  VNDR_FLG='Y'
+  AND MVNDR_NBR IN (
+  SELECT
+    DISTINCT MVNDR_NBR
+  FROM
+    analytics-askuity-thd.sid_workspace.SALES_PROMO_2022) ;
