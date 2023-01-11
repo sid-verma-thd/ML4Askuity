@@ -19,16 +19,16 @@ We would be looking at historical data to understand the impact of promotions on
 **1. Understand Promotions Table**
 - Sales `pr-edw-views-thd.VENDOR_COLLAB_VIEWS.SALES_v2` and Promotions `pr-edw-views-thd.SHARED_COMMONS.SKU_STR_RETL_PROMO` table was joined to create `analytics-askuity-thd.sid_workspace.SALES_PROMO_2022` . Reference query to build the data is `CreateSalesPromo.SQL`
 - Analysis was built on looker studio [Dashboard](https://datastudio.google.com/u/0/reporting/69f327c1-22a4-4164-b0c1-d8895bfde7e2/page/tEnnC/edit)
-- A hypothesis was established that there are certain SKUs where the sales vary with promotions `PromoAnalysis.ipynb` data for which was downloaded using the script `GetPromotionsBQ.py`
+- A hypothesis was established that there are certain SKUs where the sales vary with promotions `PromoAnalysis.ipynb`. For furthere analysis the promotional data was downloaded using the script `GetPromotionsBQ.py`
 
 **2. Build SALES-PROMOTION correlation table for each SKU** <br>
 
-Not every SKU sales are correlated to promotions. Some of the cheaper SKU Sales dont really depend on promotions. Hence it was important to create a SKU-Sales to Promotion correlation table to understand which SKUs sales are sensitive to promotions
+Not every SKU sales are correlated to promotions. For some of the inexpensive SKUs Sales dont really depend on promotions. As the major objective of the analysis was to find the impact of promotions on Sales and Alerts, it was important to understand which SKU Sales were sensitive to promotions. Hence we built a SKU- SalesCorrelation table 
 
 - SKU Sales to Promotions table was created using `CreateSKUCorrelation.SQL`
 
 **3. Get Alerts data from Firestore**
-- We need userId to fetch sales alerts data from firestore, which can be generated using `GetActiveUserIdForFirestore.SQL`
+- We need UserId to fetch sales alerts data from firestore, which can be generated using `GetActiveUserIdForFirestore.SQL`
 - We used `MultithreadFirestoreAlertsDL.py` to download data from Firestore. <br>
 Note: Multithreading was used due to high latency between API calls to fetch data
 
