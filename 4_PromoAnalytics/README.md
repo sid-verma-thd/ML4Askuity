@@ -6,11 +6,13 @@ Our current solution picks up sales anomalies in data based on the magnitude of 
 
 **Complication**
 
-We would like to explain some of the reasons why we see sales anomalies. 
+Although we are able to pickup on anomalies.
+- We would like to explain some of the reasons why we see sales anomalies. 
+- Understand the impact of promotions on Alerts and Sales Spikes
 
-**Question**
+**Solution**
 
-The main question we are trying to answer is what's the impact of promotions on Alerts and Sales spikes.
+We would be looking at historical data to understand the impact of promotions on sales, and if promotions could be one of the many explanations of the sales alerts.
 
 # Steps Followed to Build Analysis
 
